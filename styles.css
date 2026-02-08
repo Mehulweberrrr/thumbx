@@ -1,32 +1,60 @@
-.admin-dashboard {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    font-family: 'Syne', sans-serif;
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-.admin-dashboard h1, .admin-dashboard h2, .admin-dashboard h3 {
-    color: #ccff00;
-    font-family: 'Manrope', sans-serif;
+.header {
+    width: 100%;
+    background: #007acc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
 }
 
-.admin-dashboard button {
-    background-color: #ccff00;
-    color: #0a0a0a;
-    font-family: 'Syne', sans-serif;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.sidebar {
+    width: 200px;
+    background: #333;
+    color: white;
+    list-style: none;
+    padding: 15px;
+    position: fixed;
+    height: 100%;
 }
 
-.admin-dashboard button:hover {
-    background-color: #b3d600;
-}
-
-.admin-dashboard a {
-    color: #ccff00;
+.sidebar a {
+    color: white;
     text-decoration: none;
 }
 
-.admin-dashboard a:hover {
-    text-decoration: underline;
+.sidebar a:hover {
+    background: #575757;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #007acc;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
