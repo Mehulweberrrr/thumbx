@@ -102,7 +102,6 @@
         .nav-link:hover { color: #fff; }
         .menu-toggle { display: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
 
-        /* Fixed: Z-index increased to work over noise */
         .mobile-menu-overlay {
             position: fixed; inset: 0; background: #000; z-index: 9999;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -183,10 +182,9 @@
         .svc-name { font-family: var(--font-head); font-size: clamp(1.2rem, 4vw, 2.5rem); text-transform: uppercase; transition: 0.3s; }
         .service-item:hover .svc-name { color: var(--accent); padding-left: 10px; }
 
-        /* --- PORTFOLIO (UPDATED to 16:9 Grid) --- */
+        /* --- PORTFOLIO --- */
         .bento-grid {
             display: grid;
-            /* 3 Columns for PC */
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
@@ -197,7 +195,6 @@
             border: 1px solid var(--border);
             overflow: hidden;
             position: relative;
-            /* Force 16:9 Aspect Ratio */
             aspect-ratio: 16 / 9;
         }
 
@@ -262,15 +259,8 @@
             .nav-pill { width: 92%; padding: 10px 20px; }
             .hero-title { font-size: 12vw; }
             .section-header h2 { font-size: 2.2rem; }
-            .features-grid, .pricing-grid, .contact-layout { grid-template-columns: 1fr; gap: 25px; }
-            
-            /* Mobile Portfolio: 1 Column, 16:9 Ratio maintained */
-            .bento-grid { grid-template-columns: 1fr; }
-            
+            .features-grid, .pricing-grid, .contact-layout, .bento-grid { grid-template-columns: 1fr; gap: 25px; }
             .service-item { flex-direction: column; align-items: flex-start; gap: 8px; padding: 25px 0; }
-            .svc-desc { display: none; }
-            .svc-name { font-size: 1.5rem; }
-            .contact-info h2 { font-size: 3rem !important; }
             footer { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
             .marquee-strip { width: 100vw; }
         }
@@ -321,12 +311,12 @@
 
     <header id="home" class="hero container">
         <div class="hero-title">
-            <span class="reveal">DESIGNS</span>
-            <span class="reveal">THAT GET</span>
-            <span class="reveal accent">CLICKS</span>
+            <span class="reveal" id="hero-line1">DESIGNS</span>
+            <span class="reveal" id="hero-line2">THAT GET</span>
+            <span class="reveal accent" id="hero-line3">CLICKS</span>
         </div>
         <div class="hero-sub fade-up">
-            <p>We blend acid aesthetics with creator psychology to stop the scroll and dominate the algorithm.</p>
+            <p id="hero-text">We blend acid aesthetics with creator psychology to stop the scroll and dominate the algorithm.</p>
             <a href="#contact" class="btn-magnetic hover-trigger">Get Started</a>
         </div>
     </header>
@@ -339,7 +329,7 @@
             <span class="marquee-tag">Trend Setters •</span>
             <span class="marquee-tag">High CTR •</span>
             <span class="marquee-tag">Viral Design •</span>
-             <span class="marquee-tag">24h Delivery •</span>
+            <span class="marquee-tag">24h Delivery •</span>
         </div>
     </div>
 
@@ -376,28 +366,18 @@
                     <span class="svc-num">01</span>
                     <span class="svc-name">YouTube Thumbnails</span>
                 </div>
-                <p class="svc-desc">High-quality, long-form video designs.</p>
             </div>
             <div class="service-item hover-trigger fade-up">
                 <div class="svc-left">
                     <span class="svc-num">02</span>
                     <span class="svc-name">Shorts Thumbnails</span>
                 </div>
-                <p class="svc-desc">Optimized frames for Shorts feed.</p>
             </div>
             <div class="service-item hover-trigger fade-up">
                 <div class="svc-left">
                     <span class="svc-num">03</span>
                     <span class="svc-name">Channel Redesign</span>
                 </div>
-                <p class="svc-desc">Banner, Logo, and visual identity revamp.</p>
-            </div>
-            <div class="service-item hover-trigger fade-up">
-                <div class="svc-left">
-                    <span class="svc-num">04</span>
-                    <span class="svc-name">Monthly Packages</span>
-                </div>
-                <p class="svc-desc">Consistent designs for daily uploaders.</p>
             </div>
         </div>
     </section>
@@ -409,7 +389,7 @@
         <div class="bento-grid">
             <div class="bento-item hover-trigger fade-up">
                 <div class="thumb-img" style="background: url('3.png');"></div>
-                <div class="b-info"><span class="b-tag">Educational Content</span><div class="b-title">Live Stream</div></div>
+                <div class="b-info"><span class="b-tag">Educational</span><div class="b-title">Live Stream</div></div>
             </div>
             <div class="bento-item hover-trigger fade-up">
                 <div class="thumb-img" style="background: url('Tech.png');"></div>
@@ -419,71 +399,6 @@
                 <div class="thumb-img" style="background: url('v1.png');"></div>
                 <div class="b-info"><span class="b-tag">Travel Vlog</span><div class="b-title">Dubai</div></div>
             </div>
-            <div class="bento-item hover-trigger fade-up">
-                <div class="thumb-img" style="background: url('4.png');"></div>
-                <div class="b-info"><span class="b-tag">Education</span><div class="b-title">Space Facts</div></div>
-            </div>
-             <div class="bento-item hover-trigger fade-up">
-                <div class="thumb-img" style="background: url('5.png');"></div>
-                <div class="b-info"><span class="b-tag">News</span><div class="b-title">Morning Routine</div></div>
-            </div>
-            <div class="bento-item hover-trigger fade-up">
-                <div class="thumb-img" style="background: url('F.png');"></div>
-                <div class="b-info"><span class="b-tag">Finance</span><div class="b-title">Crypto Crash</div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="section container">
-        <div class="section-header fade-up">
-            <h2>Pricing <span class="accent">Plans</span></h2>
-        </div>
-        <div class="pricing-grid">
-            <div class="pricing-card fade-up hover-trigger">
-                <div class="p-plan">Starter</div>
-                <div class="p-price">₹10<span>/design</span></div>
-                <ul class="p-features">
-                    <li><i class="fas fa-check"></i> 1 High-End Thumbnail</li>
-                    <li><i class="fas fa-check"></i> 2 Revisions</li>
-                    <li><i class="fas fa-check"></i> 24h Delivery</li>
-                </ul>
-                <a href="https://wa.me/917520341214?text=Hi,%20I%20am%20interested%20in%20the%20Starter%20Plan" target="_blank" class="btn-magnetic">Choose Starter</a>
-            </div>
-            <div class="pricing-card popular fade-up hover-trigger">
-                <div class="p-tag">Best Value</div>
-                <div class="p-plan" style="color:#fff">Creator Pro</div>
-                <div class="p-price" style="color:var(--accent)">₹99<span>/pack</span></div>
-                <ul class="p-features">
-                    <li><i class="fas fa-check"></i> 10 Premium Thumbnails</li>
-                    <li><i class="fas fa-check"></i> 3 Revisions</li>
-                    <li><i class="fas fa-check"></i> 60H DELIVERY</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
-                <a href="https://wa.me/917520341214?text=Hi,%20I%20am%20interested%20in%20the%20Creator%20Pro%20Plan" target="_blank" class="btn-magnetic" style="background:#fff; color:#000;">Go Viral</a>
-            </div>
-            <div class="pricing-card fade-up hover-trigger">
-                <div class="p-plan">Agency</div>
-                <div class="p-price">₹199<span>/month</span></div>
-                <ul class="p-features">
-                    <li><i class="fas fa-check"></i> 25 Thumbnails</li>
-                    <li><i class="fas fa-check"></i> Dedicated Designer</li>
-                     <li><i class="fas fa-check"></i> 24h Delivery</li>
-                     <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
-                <a href="https://wa.me/917520341214?text=Hi,%20I%20am%20interested%20in%20the%20Agency%20Plan" target="_blank" class="btn-magnetic">Full Access</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="marquee-strip marquee-bottom">
-            <div class="marquee-content">
-                <div class="t-card">"CTR doubled in a week!" - Alex G.</div>
-                <div class="t-card">"Best designer." - TechFlow</div>
-                <div class="t-card">"Insane quality." - GamingPro</div>
-                <div class="t-card">"Algorithm expert." - Sarah Vlogs</div>
-                <div class="t-card">"CTR doubled!" - Alex G.</div>
-            </div>
         </div>
     </section>
 
@@ -491,21 +406,16 @@
         <div class="contact-layout">
             <div class="contact-info fade-up">
                 <h2 class="hero-title" style="font-size: 4rem;">LET'S WORK</h2>
-                <p style="color:var(--text-muted); margin-top:20px; font-size:1rem;">
-                    Ready to take your channel to the next level? Message us directly on WhatsApp.
-                </p>
             </div>
             <div class="contact-form fade-up">
                 <div class="form-group">
-                    <label>Name</label>
                     <input type="text" id="waName" placeholder="Your Name">
                 </div>
                 <div class="form-group">
-                    <label>Project Details</label>
-                    <textarea id="waMsg" rows="4" placeholder="Tell us about your channel..."></textarea>
+                    <textarea id="waMsg" rows="4" placeholder="Tell us about your project..."></textarea>
                 </div>
-                <button onclick="sendToWhatsapp()" class="btn-magnetic hover-trigger" style="margin-top:20px; background-color: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Chat on WhatsApp
+                <button onclick="sendToWhatsapp()" class="btn-magnetic hover-trigger" style="background-color: #25D366; color: #fff;">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                 </button>
             </div>
         </div>
@@ -514,10 +424,8 @@
     <footer class="container">
         <div class="f-copy">&copy; 2026 ThumbX Agency.</div>
         <div class="social-links">
-            <a href="#" class="hover-trigger"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover-trigger"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover-trigger"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="hover-trigger"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
 
@@ -526,108 +434,72 @@
     <script src="https://unpkg.com/split-type"></script>
 
     <script>
-        // --- WHATSAPP LOGIC ---
+        // --- 1. CMS CONTENT FETCH ---
+        async function loadHeroContent() {
+            try {
+                const response = await fetch('content/hero.json');
+                if (!response.ok) throw new Error('JSON not found');
+                const data = await response.json();
+                
+                if (data.line1) document.getElementById('hero-line1').textContent = data.line1;
+                if (data.line2) document.getElementById('hero-line2').textContent = data.line2;
+                if (data.line3) document.getElementById('hero-line3').textContent = data.line3;
+                if (data.text) document.getElementById('hero-text').textContent = data.text;
+            } catch (err) {
+                console.warn('CMS data not found, using defaults.');
+            }
+        }
+
+        // --- 2. WHATSAPP LOGIC ---
         function sendToWhatsapp() {
             let name = document.getElementById('waName').value.trim();
             let msg = document.getElementById('waMsg').value.trim();
-            
-            // Basic validation
-            if(!name || !msg) {
-                alert("Please enter your name and project details.");
-                return;
-            }
-
-            let phoneNumber = "917520341214"; 
-
-            let whatsappUrl = `https://wa.me/${phoneNumber}?text=Hi, I am ${encodeURIComponent(name)}. Details: ${encodeURIComponent(msg)}`;
-            window.open(whatsappUrl, '_blank');
+            if(!name || !msg) { alert("Please fill details."); return; }
+            window.open(`https://wa.me/917520341214?text=Hi, I am ${encodeURIComponent(name)}. Details: ${encodeURIComponent(msg)}`, '_blank');
         }
 
-        // --- 1. SCROLL PROGRESS LOGIC ---
+        // --- 3. SCROLL PROGRESS ---
         const scrollProgress = document.getElementById('scrollProgress');
         const progressRing = document.querySelector('.progress-ring-fill');
-        const radius = 25;
-        const circumference = 2 * Math.PI * radius;
-
+        const circumference = 2 * Math.PI * 25;
         progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
-        progressRing.style.strokeDashoffset = circumference;
-
-        function setProgress(percent) {
-            const offset = circumference - (percent / 100) * circumference;
-            progressRing.style.strokeDashoffset = offset;
-        }
 
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            setProgress(scrollPercent);
-            if (scrollTop > 150) {
-                scrollProgress.classList.add('visible');
-            } else {
-                scrollProgress.classList.remove('visible');
-            }
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            progressRing.style.strokeDashoffset = circumference - (scrollPercent / 100) * circumference;
+            scrollProgress.classList.toggle('visible', window.scrollY > 150);
         });
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
 
-        // --- 2. MOBILE MENU ---
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
-
-        // --- 3. CUSTOM CURSOR ---
-        if (window.matchMedia("(hover: hover)").matches) {
-            const cursorDot = document.querySelector('.cursor-dot');
-            const cursorOutline = document.querySelector('.cursor-outline');
-            window.addEventListener('mousemove', (e) => {
-                const posX = e.clientX;
-                const posY = e.clientY;
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-                
-                // Native animation for better performance
-                cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
-            });
-            
-            // Re-bind hover triggers dynamically if needed
-            document.querySelectorAll('.hover-trigger').forEach(el => {
-                el.addEventListener('mouseenter', () => document.body.classList.add('hover-active'));
-                el.addEventListener('mouseleave', () => document.body.classList.remove('hover-active'));
-            });
-        }
-
-        // --- 4. ANIMATIONS ---
+        // --- 4. ANIMATIONS & INIT ---
         gsap.registerPlugin(ScrollTrigger);
         
-        // Wait for fonts to load before splitting text
-        window.onload = function() {
+        async function init() {
+            await loadHeroContent(); // Load content first
+            
             const split = new SplitType('.reveal', { types: 'chars' });
             gsap.from(split.chars, {
                 y: 100, opacity: 0, stagger: 0.05, duration: 1, ease: "power4.out", delay: 0.2
             });
-        };
 
-        gsap.utils.toArray('.fade-up').forEach(elem => {
-            gsap.from(elem, {
-                scrollTrigger: { trigger: elem, start: "top 90%" },
-                y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
-            });
-        });
-
-        if (window.matchMedia("(hover: hover)").matches) {
-            const btns = document.querySelectorAll('.btn-magnetic');
-            btns.forEach(btn => {
-                btn.addEventListener('mousemove', (e) => {
-                    const rect = btn.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            gsap.utils.toArray('.fade-up').forEach(elem => {
+                gsap.from(elem, {
+                    scrollTrigger: { trigger: elem, start: "top 90%" },
+                    y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
                 });
-                btn.addEventListener('mouseleave', () => btn.style.transform = `translate(0, 0)`);
+            });
+        }
+        window.onload = init;
+
+        // --- 5. CURSOR ---
+        if (window.matchMedia("(hover: hover)").matches) {
+            const dot = document.querySelector('.cursor-dot');
+            const outline = document.querySelector('.cursor-outline');
+            window.addEventListener('mousemove', (e) => {
+                dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`;
+                outline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
             });
         }
     </script>
