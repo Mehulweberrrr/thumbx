@@ -1,0 +1,32 @@
+.admin-dashboard {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Syne', sans-serif;
+}
+
+.admin-dashboard h1, .admin-dashboard h2, .admin-dashboard h3 {
+    color: #ccff00;
+    font-family: 'Manrope', sans-serif;
+}
+
+.admin-dashboard button {
+    background-color: #ccff00;
+    color: #0a0a0a;
+    font-family: 'Syne', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.admin-dashboard button:hover {
+    background-color: #b3d600;
+}
+
+.admin-dashboard a {
+    color: #ccff00;
+    text-decoration: none;
+}
+
+.admin-dashboard a:hover {
+    text-decoration: underline;
+}
