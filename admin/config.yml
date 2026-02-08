@@ -1,1 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - label: "Home Hero"
+        name: "homeHero"
+        file: "content/hero.json"
+        fields:
+          - { label: "Main Heading", name: "heading", widget: "string" }
+          - { label: "Sub Text", name: "subtext", widget: "text" }
+          - { label: "Hero Image", name: "image", widget: "image" }
